@@ -1,14 +1,17 @@
 const cds = require('@sap/cds');
 
-module.exports = cds.service.impl(async function(srv) {
-    srv.on('printthehelloworld', req => {
-        console.log(req.data.input);
-        return `${req.data.input} World`;
+module.exports = cds.service.impl(async function() {
+    
+    // Automatic validation hook before creating a product
+    this.before('CREATE', 'Products', req => {
+        if (req.data.price < 0) {
+            req.error(400, 'Product price cannot be negative.');
+        }
     });
 
-    srv.on('addition', req => {
-        console.log(req.data.num1, req.data.num2);
-        let result = req.data.num1 + req.data.num2;
-        return result;
+    // Custom action handler
+    this.on('printthehelloworld', req => {
+        const input = req.data.input || 'Default';
+        return `${input} World from Enterprise CAP Service`;
     });
 });
