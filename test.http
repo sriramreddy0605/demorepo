@@ -1,0 +1,5 @@
+### Test printthehelloworld function
+GET http://localhost:4004/odata/v4/product-service/printthehelloworld(input='Hello')
+
+### Test addition function
+GET http://localhost:4004/odata/v4/product-service/addition(num1=5,num2=10)
