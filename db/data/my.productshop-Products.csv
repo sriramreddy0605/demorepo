@@ -1,0 +1,4 @@
+ID,title,description,price,stock,category_ID
+
+1,car-category_ID,Cars,200000,123432,100
+2,car-category_ID,Cars,200000,123432,101
