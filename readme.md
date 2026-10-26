@@ -20,3 +20,16 @@ File or Folder | Purpose
 ## Learn More
 
 Learn more at <https://cap.cloud.sap>.
+
+
+
+
+#STEPS OF THIS CAP PROJECT
+
+#PRODUCT SHOP APPLICATION DETAILS
+
+#cds add data
+- It will add the data in the csv file inside the data folder of db. db->data->csv
+
+## cds watch
+- start the server and listen to your file changes 

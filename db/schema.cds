@@ -14,3 +14,9 @@ entity Categories {
     name : String(50);
     products : Association to many Products on products.category = $self;
 }
+
+entity Supplier{
+    keyID: UUID;
+    name: String;
+    
+}
